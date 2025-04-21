@@ -1,0 +1,28 @@
+{
+  "name": "connectdb",
+  "version": "1.0.0",
+  "description": "This Is Nodejs Repo For Learning The Connection Of DataBase",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "arpit": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+  },
+  "keywords": [
+    "Javascript",
+    "NodeJs",
+    "Express",
+    "Mongoose"
+  ],
+  "author": "Arpit Mahajan",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2",
+    "node": "^23.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3"
+  }
+}
