@@ -21,12 +21,21 @@ app.get('/', (req, res) => {
   res.sendFile(resolve(__dirname, 'pages/index.html'));
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+
 
 // Call Here DataBase Connection.
-connectDB();
+// Jab Bhe Async Ka Code Execute Hota Haii, Tho Promise Written Karta Hai.
+
+connectDB()
+.then(() => {
+  app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+  });
+})
+.catch((err) => {
+  console.log("MONGODB CONNECTION FAILED !!!", err);
+})
+
 
 // 1st Approach For Connecting To DataBase.
 /*
